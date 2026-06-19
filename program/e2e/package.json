@@ -1,0 +1,22 @@
+{
+  "name": "transfer-hook-allowlist-e2e",
+  "version": "0.1.0",
+  "description": "End-to-end test: a real Token-2022 transfer routed through the allowlist hook, in LiteSVM",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "fixtures": "bash fetch-fixtures.sh",
+    "test": "tsx transfer-hook.e2e.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@solana/spl-token": "^0.4.14",
+    "@solana/web3.js": "^1.98.0",
+    "litesvm": "^0.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.0"
+  }
+}

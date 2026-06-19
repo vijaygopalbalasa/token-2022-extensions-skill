@@ -1,0 +1,27 @@
+[package]
+name = "transfer-hook-allowlist"
+version = "0.1.0"
+description = "Reference Token-2022 transfer-hook program: an allowlist gate (Superteam Brazil skill)"
+edition = "2021"
+license = "MIT"
+
+[features]
+default = []
+no-entrypoint = []
+
+[dependencies]
+arrayref = "0.3.9"
+solana-account-info = "3.1.1"
+solana-cpi = "3.0.0"
+solana-msg = "3.1.0"
+solana-program-entrypoint = "3.0.0"
+solana-program-error = "3.0.1"
+solana-pubkey = "4.2.0"
+solana-system-interface = { version = "3", features = ["bincode"] }
+spl-tlv-account-resolution = "0.11.0"
+spl-token-2022-interface = "2.0.0"
+spl-transfer-hook-interface = "2.0.0"
+spl-type-length-value = "0.9.1"
+
+[lib]
+crate-type = ["cdylib", "lib"]

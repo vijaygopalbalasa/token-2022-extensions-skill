@@ -1,0 +1,20 @@
+{
+  "name": "token-2022-extensions-scripts",
+  "version": "0.1.0",
+  "description": "Deterministic helper scripts for the token-2022-extensions skill",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "check": "tsx check-extensions.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@solana/spl-token": "^0.4.14",
+    "@solana/web3.js": "^1.98.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.0"
+  }
+}
