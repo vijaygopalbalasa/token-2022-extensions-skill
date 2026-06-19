@@ -67,4 +67,4 @@ transfers always succeed). Hold the pause authority securely.
 - [ ] Unneeded authorities revoked (`None`).
 - [ ] `DefaultAccountState=Frozen` flows have an explicit thaw/approval path.
 - [ ] Confidential transfers: confirmed live on mainnet **today** before relying on them.
-- [ ] Tests actually run and pass ([testing.md](testing.md)) — no skipped/fake tests.
+- [ ] Tests run and pass ([testing.md](testing.md)).

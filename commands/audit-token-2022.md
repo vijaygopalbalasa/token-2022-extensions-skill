@@ -33,4 +33,4 @@ Backed by `skill/reference/security.md` and `compatibility-matrix.md`.
 6. **Report:** findings ordered Critical→Info, each with concrete impact + fix, then a go/no-go and
    the `security.md` pre-launch checklist marked pass/fail/n-a.
 
-Only assert what the on-chain data supports. No theoretical findings.
+Base every finding on the on-chain data; include the evidence for each.

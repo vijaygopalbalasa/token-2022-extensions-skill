@@ -108,4 +108,4 @@ submodule/PR snippet that slots this into `solanabr/solana-ai-kit`.
 
 ## License
 
-MIT © 2026 Superteam Brazil. No hidden executables, no telemetry, no opaque behaviour.
+MIT © 2026 Superteam Brazil.

@@ -97,7 +97,7 @@ by hand:
 
 If you forget the extra accounts, the transfer fails — that is the hook doing its job, not a bug.
 
-## Testing a hook (real tests, see [testing.md](testing.md))
+## Testing a hook (see [testing.md](testing.md))
 
 - Unit-test the hook program's `Execute` logic in isolation with **LiteSVM** or **Mollusk**
   (load both your built `.so` and the Token-2022 program).

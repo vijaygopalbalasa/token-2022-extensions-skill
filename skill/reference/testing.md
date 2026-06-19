@@ -1,8 +1,8 @@
 # Testing Token-2022 & transfer-hook programs
 
-Real tests, run locally, no validator round-trips. The goal for a hook/extension is to assert
-behaviour: allowed transfer succeeds, disallowed transfer **fails**, fee math is exact, frozen
-accounts can't move, etc.
+Tests run locally and in-process — no validator round-trips. The goal for a hook/extension is to
+assert behaviour: allowed transfer succeeds, disallowed transfer **fails**, fee math is exact,
+frozen accounts can't move, etc.
 
 ## Tools (2026)
 
@@ -58,5 +58,4 @@ See [`program/README.md`](../../program). The repo's top-level test command buil
 `cargo build-sbf` and runs the LiteSVM suite — and the README states exactly which commands were
 run and their result, so nothing here is a claim you can't reproduce.
 
-> Principle: a test file that doesn't run, or asserts nothing, is worse than no test. Every test in
-> this skill is runnable and asserts real behaviour.
+> Each test should assert a concrete behaviour (a specific pass/fail), not just that code runs.

@@ -1,9 +1,9 @@
 # transfer-hook-allowlist — reference program
 
-A minimal, production-shaped **Token-2022 transfer hook** that gates every transfer on a
-destination-owner **allowlist**. It is the worked example behind
-[`skill/reference/transfer-hooks.md`](../skill/reference/transfer-hooks.md): real interface
-plumbing, the required security checks, and real tests — no pseudocode.
+A minimal **Token-2022 transfer hook** that gates every transfer on a destination-owner
+**allowlist**. It is the worked example behind
+[`skill/reference/transfer-hooks.md`](../skill/reference/transfer-hooks.md): the interface
+plumbing, the required security checks, and a test suite.
 
 - **Native Rust** (no Anchor) against the `spl-transfer-hook-interface` 2.x crates, so it tracks
   the installed Solana 3.x `cargo build-sbf` toolchain with no framework version friction.
@@ -15,9 +15,8 @@ plumbing, the required security checks, and real tests — no pseudocode.
   token accounts, validates the `ExtraAccountMetaList` PDA, and enforces program ownership of the
   allowlist account before reading it.
 
-> This is a teaching/reference program. Before any mainnet use, audit it and read
-> [`skill/reference/security.md`](../skill/reference/security.md). It is MIT-licensed, has no
-> hidden CPI and no opaque behaviour.
+> This is a reference program. Before any mainnet use, audit it and read
+> [`skill/reference/security.md`](../skill/reference/security.md). MIT-licensed.
 
 ## Layout
 
@@ -73,7 +72,7 @@ The e2e asserts:
 2. transfer to a **non-allowlisted** destination **fails** (the hook rejects it);
 3. transfer that **omits** the hook's extra accounts **fails**.
 
-## Verified results (last run 2026-06-19, on this machine)
+## Results
 
 Toolchain: `rustc 1.94.1`, `solana-cli 3.1.12` (`cargo build-sbf` platform-tools v1.52),
 Node `v20.19.4`, `litesvm@0.8.0`, `@solana/spl-token@0.4.14`.
@@ -85,5 +84,5 @@ Node `v20.19.4`, `litesvm@0.8.0`, `@solana/spl-token@0.4.14`.
 Program id of the local build keypair:
 `GcFyb4FFissxhZyPx7CSTX62nC4U7UepG6Ed2x7c83mR` (regenerated per machine on first build).
 
-> Everything stated here is reproducible with the commands above. The e2e is a genuine transfer
-> through the mainnet Token-2022 program — nothing about the token program is mocked.
+> The commands above are reproducible. The e2e runs a transfer through the Token-2022 program
+> loaded from mainnet (the program is not mocked).

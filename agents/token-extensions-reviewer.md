@@ -40,4 +40,4 @@ does. You do not rubber-stamp.
 A findings list ordered by severity (Critical/High/Medium/Low/Info), each with the concrete impact
 and the fix. End with a go / no-go for the user's stated distribution, and the
 `security.md` pre-launch checklist with each item marked pass/fail/n-a. State only what you can
-support from the actual mint/program data — no theoretical hand-waving.
+support from the actual mint/program data.

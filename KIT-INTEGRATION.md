@@ -90,10 +90,10 @@ Following the kit's convention and its taste for explicit non-duplication:
 > compatibility matrix**, the current 2026 stack (`@solana/kit` + `@solana-program/token-2022`),
 > and an honest confidential-transfers-disabled-on-mainnet stance.
 >
-> Ships a built, tested native-Rust allowlist transfer-hook program (`cargo build-sbf`; 10 unit +
-> 10 LiteSVM e2e checks against the real Token-2022 program — the deny path proven load-bearing) and
-> a mint inspector verified on mainnet (PYUSD). MIT. Suggest replacing or cross-linking the existing
-> `token-2022.md`; this is orthogonal to the security skills (audit) and launch-token (creation).
+> Ships a native-Rust allowlist transfer-hook program (`cargo build-sbf`; 10 unit + 10 LiteSVM e2e
+> checks that run a real Token-2022 transfer through the hook) and a mint inspector that reads a live
+> mint (PYUSD). MIT. Happy to replace or cross-link the existing `token-2022.md`; this is orthogonal
+> to the security skills (audit) and launch-token (creation).
 
 Attach: the `evals/evals.md` results and the `program/README.md` verified-results section as proof
 of the quality bar.
