@@ -1,7 +1,8 @@
 # Adding this skill to the Solana AI Kit
 
 Two clean ways to slot `token-2022-extensions` into [`solanabr/solana-ai-kit`](https://github.com/solanabr/solana-ai-kit),
-matching the kit's existing patterns. **Replace `<your-username>` with the repo you submit.**
+matching the kit's existing patterns. Source repo:
+[`vijaygopalbalasa/token-2022-extensions-skill`](https://github.com/vijaygopalbalasa/token-2022-extensions-skill).
 
 This skill also directly answers the kit's open issue **#12 "Add full Token Extension skill suite."**
 
@@ -18,14 +19,14 @@ Add one object to `.claude/skills/skill-registry.json`. Format matches the exist
   "type": "skill",
   "domain": "solana-defi",
   "description": "Decision-first, tested successor to the kit's flat token-2022.md: choose the right extension set, wire transfer hooks/fees/metadata/groups correctly, and ship tokens that don't break on DEXs/wallets/CEXs. Includes a built+tested allowlist transfer-hook program and a mint inspector. Closes issue #12.",
-  "source": "https://github.com/<your-username>/token-2022-extensions-skill",
+  "source": "https://github.com/vijaygopalbalasa/token-2022-extensions-skill",
   "install": {
     "method": "submodule",
-    "command": "git submodule add https://github.com/<your-username>/token-2022-extensions-skill .claude/skills/ext/token-2022",
+    "command": "git submodule add https://github.com/vijaygopalbalasa/token-2022-extensions-skill .claude/skills/ext/token-2022",
     "env": []
   },
   "license": "MIT",
-  "maintainer": "<your-username>",
+  "maintainer": "vijaygopalbalasa",
   "signal": {
     "stars": 0,
     "last_commit": "2026-06-19",
@@ -50,14 +51,14 @@ Add one object to `.claude/skills/skill-registry.json`. Format matches the exist
 
 1. **Add the submodule** (never `git add` the directory itself — it must register as a submodule):
    ```bash
-   git submodule add https://github.com/<your-username>/token-2022-extensions-skill .claude/skills/ext/token-2022
+   git submodule add https://github.com/vijaygopalbalasa/token-2022-extensions-skill .claude/skills/ext/token-2022
    git add .gitmodules .claude/skills/ext/token-2022
    ```
    `.gitmodules` entry:
    ```
    [submodule ".claude/skills/ext/token-2022"]
        path = .claude/skills/ext/token-2022
-       url = https://github.com/<your-username>/token-2022-extensions-skill
+       url = https://github.com/vijaygopalbalasa/token-2022-extensions-skill
    ```
 
 2. **Add a routing row** to the Task Routing table in `.claude/skills/SKILL.md` (same shape as the
