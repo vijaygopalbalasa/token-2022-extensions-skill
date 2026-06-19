@@ -54,20 +54,20 @@ token-2022-extensions-skill/
 ├── agents/      token-extensions-engineer (build) · token-extensions-reviewer (security)
 ├── commands/    /design-token · /add-transfer-hook · /audit-token-2022
 ├── rules/       token-2022.md  (auto-loads coding rules on Rust/TS files)
-├── program/     working, TESTED allowlist transfer-hook reference program
+├── program/     allowlist transfer-hook reference program (with unit + e2e tests)
 └── evals/       behavioural + mechanical evaluation scenarios
 ```
 
-## Why it's production-grade (not AI slop)
+## Tests & verification
 
-- **Real working code + real tests.** `program/` is a native-Rust transfer hook that **compiles
-  with `cargo build-sbf`**, has **10 host unit tests**, and a **LiteSVM end-to-end test that drives
-  a genuine Token-2022 transfer** (loaded from the mainnet program) and asserts the allowlist
-  actually allows/denies. See `program/README.md` for the exact commands + verified results.
-- **The inspector script runs** against real mainnet mints (verified on PYUSD).
-- **Current to the 2026 stack**, with versions verified on 2026-06-19 and an honest stance on
-  things that change (e.g. confidential transfers being disabled on mainnet).
-- **Progressive disclosure**: `SKILL.md` is a router; topic files load only when needed.
+- `program/` is a native-Rust transfer hook that compiles with `cargo build-sbf`, with **10 host
+  unit tests** and a **LiteSVM end-to-end test** that drives a real Token-2022 transfer (loaded
+  from the mainnet program) and asserts the allowlist allows/denies correctly. See
+  `program/README.md` for the exact commands and results.
+- The inspector script runs against real mainnet mints (verified on PYUSD).
+- Versions are pinned against the 2026 stack (verified 2026-06-19); facts that change over time
+  (e.g. confidential transfers being disabled on mainnet) are flagged with a "verify" note.
+- `SKILL.md` is a thin router; topic files load only when needed (progressive disclosure).
 
 ## Install
 

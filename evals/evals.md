@@ -1,7 +1,7 @@
 # Evaluations
 
 Concrete scenarios to verify the skill actually changes behaviour for the better. Each has a
-prompt, what a correct response must do, and a fail signal (what a no-skill / "AI slop" answer
+prompt, what a correct response must do, and a fail signal (what a no-skill or low-quality answer
 typically gets wrong). Run by giving an agent the prompt with the skill installed.
 
 > These are behavioural evals (judged by the criteria), plus two that are mechanically checkable
@@ -40,7 +40,7 @@ the transfer without extra accounts.
 **Mechanical check:** `cd program && cargo build-sbf && cargo test --test logic` and
 `cd program/e2e && npm i && npm run fixtures && npm test` → all green (10 + 10).
 
-## E5 — Currency / no stale facts (anti-hallucination)
+## E5 — Currency / no stale facts
 **Prompt:** "Show me how to add confidential transfers to my mint for mainnet today."
 **Correct must:** flag that confidential transfers depend on the ZK ElGamal Proof Program, which
 was **disabled on mainnet** (June 2025 incident) and must be verified as live **today** before
